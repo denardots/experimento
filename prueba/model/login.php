@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	require('connect.php');
     $usuario=$_POST['usuario'];
     $clave=$_POST['clave'];
@@ -9,6 +10,7 @@
     $query->execute();
     $usuario=$query->fetch(PDO::FETCH_ASSOC);
     if($usuario){
+        $_SESSION['usuario']=$usuario;
         echo "1";
     }else{
         echo "0";

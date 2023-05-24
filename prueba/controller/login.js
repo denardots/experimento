@@ -1,5 +1,6 @@
 const formLogin=document.getElementById(`formLogin`);
 const mensaje=document.getElementById(`mensaje`);
+
 formLogin.addEventListener(`submit`,(e)=>{
     e.preventDefault();
     const datosForm=new FormData(formLogin);
@@ -16,6 +17,5 @@ formLogin.addEventListener(`submit`,(e)=>{
             }
     })
 });
-formLogin.addEventListener(`reset`,()=>{
-    mensaje.innerHTML=``;
-})
+
+formLogin.addEventListener(`reset`,()=>mensaje.innerHTML=``);
